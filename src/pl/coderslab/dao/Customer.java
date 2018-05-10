@@ -1,14 +1,18 @@
 package pl.coderslab.dao;
 
-import java.sql.Date;
 
 public class Customer {
 	private int id;
 	private String name;
 	private String surname;
-	private Date birthDate;
+	private String birthDate;
 
-	public Customer(String name, String surname, Date birthDate, int id) {
+	@Override
+	public String toString() {
+		return "Customer [id=" + id + ", name=" + name + ", surname=" + surname + ", birthDate=" + birthDate + "]";
+	}
+
+	public Customer(String name, String surname, String birthDate, int id) {
 		super();
 		this.name = name;
 		this.surname = surname;
@@ -16,7 +20,10 @@ public class Customer {
 		this.id = id;
 	}
 
-	public Customer(String name, String surname, Date birthDate) {
+	public Customer(int id) {
+		this.id = id;
+	}
+	public Customer(String name, String surname, String birthDate) {
 		super();
 		this.name = name;
 		this.surname = surname;
@@ -47,11 +54,12 @@ public class Customer {
 		this.surname = surname;
 	}
 
-	public Date getBirthDate() {
+	public String getBirthDate() {
 		return birthDate;
 	}
+	
 
-	public void setBirthDate(Date birthDate) {
+	public void setBirthDate(String birthDate) {
 		this.birthDate = birthDate;
 	}
 }

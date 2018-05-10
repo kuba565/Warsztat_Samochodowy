@@ -1,6 +1,5 @@
 package pl.coderslab.dao;
 
-import java.sql.Date;
 
 public class Vehicle {
 
@@ -9,9 +8,9 @@ public class Vehicle {
 	private String model;
 	private String yearOfProduction;
 	private String regNumber;
-	private Date nextReview;
+	private String nextReview;
 
-	public Vehicle(String make, String model, String yearOfProduction, String regNumber, Date nextReview) {
+	public Vehicle(String make, String model, String yearOfProduction, String regNumber, String nextReview) {
 		super();
 		this.make = make;
 		this.model = model;
@@ -20,7 +19,7 @@ public class Vehicle {
 		this.nextReview = nextReview;
 	}
 
-	public Vehicle(int id, String make, String model, String yearOfProduction, String regNumber, Date nextReview) {
+	public Vehicle(int id, String make, String model, String yearOfProduction, String regNumber, String nextReview) {
 		super();
 		this.id = id;
 		this.make = make;
@@ -70,11 +69,11 @@ public class Vehicle {
 		this.regNumber = regNumber;
 	}
 
-	public Date getNextReview() {
+	public String getNextReview() {
 		return nextReview;
 	}
 
-	public void setNextReview(Date nextReview) {
+	public void setNextReview(String nextReview) {
 		this.nextReview = nextReview;
 	}
 

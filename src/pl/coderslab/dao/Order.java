@@ -1,12 +1,10 @@
 package pl.coderslab.dao;
 
-import java.sql.Date;
-
 public class Order {
 	private int id;
-	private Date arrivalDate;
-	private Date repairBeginDatePlan;
-	private Date repairBeginDateReal;
+	private String arrivalString;
+	private String repairBeginStringPlan;
+	private String repairBeginStringReal;
 	private String assignedWorker;
 	private String problemDesc;
 	private String repairDesc;
@@ -17,13 +15,13 @@ public class Order {
 	private double wrkHourCost;
 	private int wrkHours;
 
-	public Order(Date arrivalDate, Date repairBeginDatePlan, Date repairBeginDateReal, String assignedWorker,
+	public Order(String arrivalString, String repairBeginStringPlan, String repairBeginStringReal, String assignedWorker,
 			String problemDesc, String repairDesc, String status, String vehicleRepaired, double customerRepairCost,
 			double partsCost, double wrkHourCost, int wrkHours) {
 		super();
-		this.arrivalDate = arrivalDate;
-		this.repairBeginDatePlan = repairBeginDatePlan;
-		this.repairBeginDateReal = repairBeginDateReal;
+		this.arrivalString = arrivalString;
+		this.repairBeginStringPlan = repairBeginStringPlan;
+		this.repairBeginStringReal = repairBeginStringReal;
 		this.assignedWorker = assignedWorker;
 		this.problemDesc = problemDesc;
 		this.repairDesc = repairDesc;
@@ -36,14 +34,14 @@ public class Order {
 	}
 
 	
-	public Order(int id, Date arrivalDate, Date repairBeginDatePlan, Date repairBeginDateReal, String assignedWorker,
+	public Order(int id, String arrivalString, String repairBeginStringPlan, String repairBeginStringReal, String assignedWorker,
 			String problemDesc, String repairDesc, String status, String vehicleRepaired, double customerRepairCost,
 			double partsCost, double wrkHourCost, int wrkHours) {
 		super();
 		this.id = id;
-		this.arrivalDate = arrivalDate;
-		this.repairBeginDatePlan = repairBeginDatePlan;
-		this.repairBeginDateReal = repairBeginDateReal;
+		this.arrivalString = arrivalString;
+		this.repairBeginStringPlan = repairBeginStringPlan;
+		this.repairBeginStringReal = repairBeginStringReal;
 		this.assignedWorker = assignedWorker;
 		this.problemDesc = problemDesc;
 		this.repairDesc = repairDesc;
@@ -63,28 +61,28 @@ public class Order {
 		this.id = id;
 	}
 
-	public Date getArrivalDate() {
-		return arrivalDate;
+	public String getArrivalString() {
+		return arrivalString;
 	}
 
-	public void setArrivalDate(Date arrivalDate) {
-		this.arrivalDate = arrivalDate;
+	public void setArrivalString(String arrivalString) {
+		this.arrivalString = arrivalString;
 	}
 
-	public Date getRepairBeginDatePlan() {
-		return repairBeginDatePlan;
+	public String getRepairBeginStringPlan() {
+		return repairBeginStringPlan;
 	}
 
-	public void setRepairBeginDatePlan(Date repairBeginDatePlan) {
-		this.repairBeginDatePlan = repairBeginDatePlan;
+	public void setRepairBeginStringPlan(String repairBeginStringPlan) {
+		this.repairBeginStringPlan = repairBeginStringPlan;
 	}
 
-	public Date getRepairBeginDateReal() {
-		return repairBeginDateReal;
+	public String getRepairBeginStringReal() {
+		return repairBeginStringReal;
 	}
 
-	public void setRepairBeginDateReal(Date repairBeginDateReal) {
-		this.repairBeginDateReal = repairBeginDateReal;
+	public void setRepairBeginStringReal(String repairBeginStringReal) {
+		this.repairBeginStringReal = repairBeginStringReal;
 	}
 
 	public String getAssignedWorker() {
